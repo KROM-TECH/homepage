@@ -1,0 +1,20 @@
+.siz {
+  height: 477.375px;
+  width: 375px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.con {
+  border-bottom: ridge;
+  border-top: ridge;
+  border-color: gold;
+  margin-top: 0.5rem;
+  height: 10rem;
+}
+
+.ac {
+  margin-top: 0.8rem;
+}
+
+

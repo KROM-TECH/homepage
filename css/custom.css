@@ -4,10 +4,19 @@ body {
 }
 
 .siz {
-  height: 477.375px;
-  width: 375px;
+  height: auto !important;
+  width: 20% !important;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 835px) {
+  .siz {
+    height: auto !important;
+    width: 50% !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .con {
@@ -20,4 +29,10 @@ body {
 
 .ac {
   margin-top: 0.8rem;
+}
+
+.flex {
+  display: flex !important;
+  overflow-x: auto;
+  flex-wrap: wrap;
 }

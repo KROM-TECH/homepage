@@ -44,6 +44,12 @@ body {
   animation-name: fadeInUp;
 }
 
+.ani {
+  animation-duration: 1s;
+  animation-name: fadeInRight;
+  height: 40vh;
+}
+
 .stack.one {
   font-family: 'Orbitron', sans-serif;
   font-size: 0rem;
@@ -62,6 +68,12 @@ body {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-name: fadeInSize;
+}
+
+.fadeRight {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInRight
 }
 
 /* Animations */

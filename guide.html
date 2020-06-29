@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/custom.css" media="screen,projection" />
+  <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kromtech</title>
+  <style>
+    body {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    h3 {
+      font-size: 4.5rem;
+    }
+
+    .head {
+      text-align: center;
+    }
+    p{
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+    hr{
+      width: 100%;
+      background-color: blueviolet;
+    }
+    h4{
+      margin: 1rem;
+    }
+    .right{
+          margin: 1rem;
+     
+    }
+    .left{
+      margin: 1rem;
+ 
+    }
+  </style>
+</head>
+
+<body style="width:100%;">
+
+  <div class="head">
+    <h3>Available Group</h3>
+    <h4>Below are the available groups and their functions ensure to go through them and fill the application form
+      respectively</h4>
+  </div>
+  <hr>
+  <main id='view'>
+    <div  class="ani">
+    <h4>
+      <u>Developer Group</u>
+      </h4>
+      <p>For those of us that are interested in programming and software development, this group is for you. You would
+        be placed
+        in groups and given real-life projects to work on or update existing projects, this won't just make you a better
+        programmer, it would also expose you to how actually softwares are developed.</p>
+        </div>
+        <button onclick="aca()" class="btn right purple ">Next</button>
+ 
+  </main>
+
+
+
+<script>
+  const view = document.getElementById('view')
+  function dev(){
+    view.innerHTML = `
+    <div  class="ani">
+        <h4>
+      <u>Developer Group</u>
+      </h4>
+      <p class="logo">For those of us that are interested in programming and software development, this group is for you. You would
+        be placed
+        in groups and given real-life projects to work on or update existing projects, this won't just make you a better
+        programmer, it would also expose you to how actually softwares are developed.</p>
+        </div>
+        <button onclick="aca()" class="btn right purple ">Next</button>
+        
+    `
+  }
+  
+  function aca(){
+    view.innerHTML = `
+    <div  class="ani">
+        <h4>
+      <u>Academic Group</u>
+      </h4>
+      <p>For those that would rather be in front of a textbook than a computer (nerds🤭), we also have a section for you. You
+      would be working with the devs to gather and organize academics resources for Students, depending on you this resources
+      might be free or not.</p>
+        </div>
+        <button onclick="dev()" class="btn left purple ">previous</button>
+        <button onclick="com()" class="btn right purple ">Next</button>
+        
+    `
+  }
+
+  function com(){
+    view.innerHTML = `
+    <div  class="ani">
+        <h4>
+      <u>Community Group</u>
+      </h4>
+      <p>So this group is basically anyone who wants to contribute but does not fit into the above sections.
+      You would be among the testers, help with surveys, publicity, and various others. You guys would be involved in
+      various
+      important tasks.</p>
+        </div>
+        <button onclick="aca()" class="btn left purple ">previous</button>
+        <button onclick="location.assign('./recuit.html')" class="btn right purple ">Done</button>
+        
+    `
+  }
+</script>
+
+
+</body>
+
+</html>

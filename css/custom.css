@@ -38,6 +38,10 @@ body {
   flex-wrap: wrap;
 }
 
+button{
+  z-index: 100;
+}
+
 .logo {
   /* animation-delay: 2s; */
   animation-duration: 2s;

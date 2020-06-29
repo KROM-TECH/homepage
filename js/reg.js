@@ -55,7 +55,7 @@ function form() {
     <div class="dev" style="display:none;">
           <div style=" margin-bottom: 8px;">
             <label for="">track</label>
-            <select name="Track" id="track" required style="display: block;">
+            <select name="Track" id="track" style="display: block;">
               <option value="" disabled selected>Select Your Track</option>
               <option value="Backend">Backend</option>
               <option value="Frontend">Frontend</option>
@@ -70,7 +70,7 @@ function form() {
     </div>
 
     <div class="container center">
-      <button type='submit' class="btn purple wave wave-light" style="margin-top: 50px;">Submit</button>
+      <button type='submit' id='btn' class="btn purple wave wave-light" style="margin-top: 50px;">Submit</button>
     </div>
 
 
@@ -90,13 +90,14 @@ function control() {
     }
   })
 
-      const form = document.forms['submit-to-google-sheet']
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyvS9mC-j7VcD9tXl4wWKjy5sA8nmE5kCoTkDHoPeFiFSOrBrV1/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyZQwmc5BwXCDM8tlR5MU1bkN7-2tcSIiKctGQHjdJ0xJECo7HM/exec'
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => { alert('Success!', response) })
-        .catch(error => alert('Error!', error.message))
-    })
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    document.querySelector('#btn').disabled = true;
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => { alert('Success!', response) })
+      .catch(error => alert('Error!', error.message))
+  })
 }

@@ -51,6 +51,7 @@ button{
 .ani {
   animation-duration: 1s;
   animation-name: fadeInRight;
+  margin-bottom: 3rem;
   height: 40vh;
 }
 

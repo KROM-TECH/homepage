@@ -4,25 +4,25 @@ const view = document.querySelector('.view')
 
 function form() {
   view.innerHTML = `
-    <form action="" style="padding: 10%;" class="fadeRight">
+    <form action="" name="submit-to-google-sheet" style="padding: 10%;" class="fadeRight">
     <div>
       <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Enter Your Full Name" required />
+      <input id="name" name="Name" type="text" placeholder="Enter Your Full Name" required />
     </div>
 
     <div>
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter Your Email" required />
+      <input id="email" name="Email" type="email" placeholder="Enter Your Email" required />
     </div>
 
     <div>
       <label for="phone">Phone Num</label>
-      <input id="phone" type="text" placeholder="WhatsApp Prefered" required />
+      <input id="phone" name="Phone" type="text" placeholder="WhatsApp Prefered" required />
     </div>
 
     <div style=" margin-bottom: 8px;">
       <label for="">University</label>
-      <select required style="display: block;">
+      <select name="University" required style="display: block;">
         <option value="" disabled selected>Select Your University</option>
         <option value="Unilag">University of Lagos</option>
       </select>
@@ -30,7 +30,7 @@ function form() {
 
     <div style=" margin-bottom: 8px;">
       <label for="">Faculty</label>
-      <select required style="display: block;">
+      <select name="Faculty" required style="display: block;">
         <option value="" disabled selected>Select Your Faculty</option>
         <option value="">1</option>
         <option value="">1</option>
@@ -39,12 +39,12 @@ function form() {
 
     <div>
       <label for="dept">Department</label>
-      <input id="dept" type="text" placeholder="Enter Your Department" required />
+      <input id="dept" name="Department" type="text" placeholder="Enter Your Department" required />
     </div>
 
     <div style=" margin-bottom: 8px;">
       <label for="">Group</label>
-      <select id="group" required style="display: block;">
+      <select name="Group" id="group" required style="display: block;">
         <option value="" disabled selected>Select Your Group</option>
         <option value="Dev">Developers</option>
         <option value="Aca">Academics</option>
@@ -55,7 +55,7 @@ function form() {
     <div class="dev" style="display:none;">
           <div style=" margin-bottom: 8px;">
             <label for="">track</label>
-            <select id="track" required style="display: block;">
+            <select name="Track" id="track" required style="display: block;">
               <option value="" disabled selected>Select Your Track</option>
               <option value="Backend">Backend</option>
               <option value="Frontend">Frontend</option>
@@ -65,7 +65,7 @@ function form() {
           
           <div>
             <label for="dept">Github URL</label>
-            <input id="dept" type="text" placeholder="Optional"/>
+            <input name="Github" id="dept" type="text" placeholder="Optional"/>
           </div>
     </div>
 
@@ -89,4 +89,14 @@ function control() {
       document.querySelector('.dev').style.display = 'none'
     }
   })
+
+      const form = document.forms['submit-to-google-sheet']
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyvS9mC-j7VcD9tXl4wWKjy5sA8nmE5kCoTkDHoPeFiFSOrBrV1/exec'
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => { alert('Success!', response) })
+        .catch(error => alert('Error!', error.message))
+    })
 }

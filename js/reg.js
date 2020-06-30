@@ -32,8 +32,14 @@ function form() {
       <label for="">Faculty</label>
       <select name="Faculty" required style="display: block;">
         <option value="" disabled selected>Select Your Faculty</option>
-        <option value="">1</option>
-        <option value="">1</option>
+        <option value="Arts">Arts</option>
+        <option value="Education">Education</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Environmental science">Environmental science</option>
+        <option value="Law">Law</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Science">Science</option>
+        <option value="Social Science">Social Science</option>
       </select>
     </div>
 
@@ -97,7 +103,22 @@ function control() {
     e.preventDefault()
     document.querySelector('#btn').disabled = true;
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => { alert('Success!', response) })
+      .then(response => { formSubmit() })
       .catch(error => alert('Error!', error.message))
   })
 }
+formSubmit()
+
+function formSubmit() {
+  view.innerHTML = `
+   <div>
+  <h3 style="text-align: center; margin-top:40vh;">
+    Form Submitted <br>
+      Navigating to Home Page <br>
+        ...
+  </h3>
+</div>
+  `
+  setTimeout(window.location.assign('./index.html'), 5000)
+}
+

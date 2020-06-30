@@ -107,7 +107,6 @@ function control() {
       .catch(error => alert('Error!', error.message))
   })
 }
-formSubmit()
 
 function formSubmit() {
   view.innerHTML = `
@@ -119,6 +118,9 @@ function formSubmit() {
   </h3>
 </div>
   `
-  setTimeout(window.location.assign('./index.html'), 5000)
+  setTimeout(redir, 3000)
 }
 
+ function redir () {
+  window.location.assign('./index.html')
+}

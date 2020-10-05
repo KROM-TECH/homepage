@@ -196,7 +196,6 @@ button {
   vertical-align: middle;
 }
 
-
 /* 15 */
 .btn-15 {
   background: #1b2a4e;
@@ -227,14 +226,17 @@ button {
 .btn-15:active {
   top: 2px;
 }
-.bg-cream{
-  background-color: #d6dadf !important;;
+.bg-cream {
+  background-color: #d6dadf !important;
+  /* width: 100vw; */
+  height: 90vh;
+  overflow: hidden;
 }
 
 .bg {
   width: 100vw;
   height: 100vh;
-  background-color: #1b2a4e !important;
+  background-color: #99a8d2 !important;
   display: flex;
 }
 a {
@@ -265,11 +267,33 @@ a {
   color: white;
   letter-spacing: 1.5px;
 }
-.outline-text{
+.outline-text {
   -webkit-text-stroke: 0.1px rgb(31, 29, 29);
   -webkit-text-fill-color: #1b2a4e;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-  1px 1px 0 #000;
+    1px 1px 0 #000;
+}
+.chapters{
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  justify-content: center;
+}
+.uni{
+  background-color: #174971;
+  background-image: linear-gradient(to bottom right, #174971, #f15b6c );
+  padding: 1rem;
+  height: 1.9rem;
+  border-radius:10px;
+  overflow: hidden;
+}
+
+.uni:hover{
+  box-shadow: 1px 2px 3px black;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #f15b6c, #174971 );
+  border: 1px solid white;
+
 }
 
 .text:hover {
@@ -281,10 +305,21 @@ a {
 .bg-white {
   background-color: white;
 }
+.bg-members {
+  background-color: white;
+  background-image: url('../img/map.jpg');
+  background-color: white;
+  /* background-attachment: fixed; */
+  background-size: 50rem auto;
+  height: auto;
+}
 .col-50 {
   width: 50%;
 }
-.goals{
+.col-30 {
+  width: 30.33%;
+}
+.goals {
   display: flex;
   justify-content: space-around;
 }
@@ -302,7 +337,7 @@ nav {
   align-items: center;
 }
 
-h1{
+h1 {
   font-size: 4rem;
 }
 .img-center {
@@ -312,6 +347,10 @@ h1{
   align-items: center;
   animation: fadeInRight 1s forwards;
 }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
 .content-center {
   display: flex;
   flex-direction: column;
@@ -320,18 +359,18 @@ h1{
   margin-left: 1rem;
   animation: fadeInLeft 1s forwards;
 }
-.about-heading{
+.about-heading {
   font-size: 3rem;
   text-align: center;
 }
-.about-content{
+.about-content {
   font-size: 1.1rem;
   text-align: center;
   word-spacing: 8px;
   line-height: 1.5rem;
 }
 
-.h3{
+.h3 {
   font-size: 1.2rem;
 }
 
@@ -399,36 +438,39 @@ span:hover {
 }
 /* ============================================================================================================================= */
 
-.p-1{
+.p-1 {
   padding: 1rem;
 }
-.p-2{
+.p-2 {
   padding: 2rem;
 }
-.p-3{
+.p-3 {
   padding: 3rem;
 }
-.p-4{
+.p-4 {
   padding: 4rem;
 }
-.p-5{
+.p-5 {
   padding: 5rem;
 }
-.p-6{
+.p-6 {
   padding: rem;
 }
-.px-8{
+.px-8 {
   padding: 0rem 8rem;
 }
-.px-10{
+.px-10 {
   padding: 0rem 10rem;
 }
-.px-12{
+.px-12 {
   padding: 0rem 12rem;
 }
-.px-15{
+.px-15 {
   padding: 0rem 15rem;
 }
-.pt-1{
+.pt-1 {
   padding-top: 1rem;
+}
+.pt-2 {
+  padding-top: 2rem;
 }

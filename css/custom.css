@@ -10,7 +10,8 @@
   overflow-x: hidden;
 }
 body {
-  font-family: "Teko", sans-serif;
+  /* font-family: "Montserrat"; */
+  /* font-family: "Teko", sans-serif; */
   font-family: "Sansita Swashed", cursive;
   
 }
@@ -212,7 +213,8 @@ button {
   top: 0;
   right: 0;
   z-index: -1;
-  background-color: #b621fe;
+  /* background-color: #b621fe; */
+  background-color: #009688;
   border-radius: 5px;
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
@@ -229,7 +231,7 @@ button {
   top: 2px;
 }
 .bg-cream {
-  background-color: #d6dadf !important;
+  background-color: #f1f1f1 !important;
   /* width: 100vw; */
   height: 90vh;
   overflow: hidden;
@@ -238,7 +240,8 @@ button {
 .bg {
   width: 100vw;
   height: 100vh;
-  background-color: #99a8d2 !important;
+  /* background-color: #99a8d2 !important; */
+  background-color: #fff !important;
   display: flex;
 }
 a {
@@ -270,8 +273,9 @@ a {
   letter-spacing: 1.5px;
 }
 .outline-text {
-  -webkit-text-stroke: 0.1px rgb(31, 29, 29);
-  -webkit-text-fill-color: #1b2a4e;
+  /* -webkit-text-stroke: 0.1px rgb(31, 29, 29); */
+  /* -webkit-text-fill-color: #1b2a4e; */
+  -webkit-text-fill-color: #1b4974;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
@@ -304,8 +308,18 @@ a {
 .nav-content {
   margin-right: 2rem;
 }
+.contact-flex{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 2rem !important;
+}
+
 .bg-white {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 .bg-members {
   background-image: url('../img/map.jpg');
@@ -315,7 +329,7 @@ a {
   height: auto;
 }
 .bg-projects {
-  background-color: #d6dadf;
+  background-color: #f1f1f1;
   height: auto;
 }
 .col-50 {
@@ -362,11 +376,59 @@ nav {
   color: #fff;
   background-color: #000;
 }
+/* ========================================Contact Form=========================================== */
+.contactForm{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.field{
+  padding: 8px;
+}
+input{
+  height: 30px;
+  width: 10rem;
+  box-shadow:  2px 2px 2px 0px #000;
+  border: 1px solid #aaa;
+  outline: none;
+}
+textarea{
+  height: 30px;
+  width: 10rem;
+  resize: vertical;
+}
+label{
+  display: block;
+  padding: 5px 0px;
+}
+/* ========================================Contact Form=========================================== */
 .social{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.menu-btn{
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border-radius: 5px;
+  padding: 1rem;
+  /* background-color: #1b4974a8; */
+  background-color: rgba(255, 255, 255, 0.23);
+  cursor: pointer;
+  color: #000 !important;
+  box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+.menu-btn:hover{
+  /* background-color: #093053; */
+  background-color: #fff;
+  border: 1px solid white;
+}
 .row1{
   max-width: 100%;
   display: flex;
@@ -476,6 +538,8 @@ h1 {
   font-size: 1.2rem;
 }
 
+
+
 /* ================================================== SPAN Animation ========================================================= */
 
 span {
@@ -493,7 +557,7 @@ span:nth-child(2):hover {
     4px 4px #1b818d, 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
-span:nth-child(3):hover {
+/* span:nth-child(3):hover {
   color: #49b8ff;
   top: -8px;
   left: -8px;
@@ -501,27 +565,16 @@ span:nth-child(3):hover {
     4px 4px #116295, 5px 5px #116295, 6px 6px #116295, 7px 7px #116295,
     8px 8px #116295, 9px 9px #116295, 10px 10px #116295, 11px 11px #116295,
     12px 12px #116295, 13px 13px #116295, 14px 14px 5px rgba(0, 0, 0, 0.5);
-}
+} */
 
-span:nth-child(4):hover {
-  color: #cc3fd9;
-  top: 4px;
-  left: 4px;
-  text-shadow: 1px 1px #870d92, 2px 2px #870d92, 2px 2px 3px rgba(0, 0, 0, 0.5);
-}
 
-span:nth-child(6):hover {
-  color: #d34a87;
-  top: -10px;
-  left: -10px;
-  text-shadow: 1px 1px #8b1b4d, 2px 2px #8b1b4d, 3px 3px #8b1b4d,
-    4px 4px #8b1b4d, 5px 5px #8b1b4d, 6px 6px #8b1b4d, 7px 7px #8b1b4d,
-    8px 8px #8b1b4d, 9px 9px #8b1b4d, 10px 10px #8b1b4d, 11px 11px #8b1b4d,
-    12px 12px #8b1b4d, 13px 13px #8b1b4d, 14px 14px #8b1b4d, 15px 15px #8b1b4d,
-    16px 16px #8b1b4d, 16px 16px 8px rgba(0, 0, 0, 0.5),
-    17px 17px 10px rgba(0, 0, 0, 0.3), 18px 18px 5px rgba(0, 0, 0, 0.5);
-}
 
+span:nth-child(3):hover {
+  color: #d13153;
+  text-shadow: 1px 1px #83142c, 2px 2px #83142c, 3px 3px #83142c,
+    4px 4px #83142c, 5px 5px #83142c, 6px 6px #83142c, 7px 7px #83142c,
+    8px 8px #83142c, 9px 9px 3px rgba(0, 0, 0, 0.5);
+}
 span:nth-child(7):hover {
   color: #d13153;
   text-shadow: 1px 1px #83142c, 2px 2px #83142c, 3px 3px #83142c,

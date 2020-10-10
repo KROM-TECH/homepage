@@ -392,15 +392,45 @@ input{
   box-shadow:  2px 2px 2px 0px #000;
   border: 1px solid #aaa;
   outline: none;
+  padding: 2px 5px;
 }
+input:focus{
+  box-shadow: -2px -2px 2px 1px #0000008f;
+}
+select{
+  height: 30px;
+  width: 10rem;
+  box-shadow:  2px 2px 2px 0px #000;
+  border: 1px solid #aaa;
+  outline: none;
+  padding: 5px 5px;
+}
+
 textarea{
   height: 30px;
   width: 10rem;
-  resize: vertical;
+  box-shadow:  2px 2px 2px 0px #000;
+  border: 1px solid #aaa;
+  outline: none;
+  padding: 2px 5px;
+}
+textarea:focus{
+  box-shadow: -2px -2px 2px 1px #0000008f;
 }
 label{
   display: block;
   padding: 5px 0px;
+  text-align: center;
+}
+.form-btn{
+  color: #000;
+  padding: 0.6rem;
+  width: auto;
+  height: auto;
+  margin: 2px 0px;
+}
+.social-mobile{
+  display: none;
 }
 /* ========================================Contact Form=========================================== */
 .social{
@@ -426,6 +456,20 @@ label{
   /* background-color: #093053; */
   background-color: #fff;
   border: 1px solid white;
+  animation: wave 0.5s forwards  ;
+}
+
+
+@keyframes wave {
+  from{
+    background-color: #1b2a4e;
+    transform: rotateZ('0');
+
+  }
+  to{
+    background-color: #fff;
+    transform: rotateZ('360');
+  }
 }
 .row1{
   max-width: 100%;
@@ -701,5 +745,15 @@ h2{
 .col-md-100{
   width: 100%;
 }
-
+.social{
+  display: none;
+}
+.social-mobile{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
 }

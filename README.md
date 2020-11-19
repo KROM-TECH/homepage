@@ -1,4 +1,5 @@
 # homepage
+<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -22,3 +23,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+a webpage listing all of our applications and contact details
+>>>>>>> a808f663ee8dc237414cdd5a0433290187881023

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-cream p-5 p-md-1">
+  <section class="bg-cream p-5 p-md-1" id="#about">
     <h2 class="about-heading text p-2">About</h2>
     <div class="about-content">
       <p class="px-8 px-md-1">

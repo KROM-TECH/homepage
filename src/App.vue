@@ -517,8 +517,8 @@ nav {
   .col-md-100 {
     width: 100%;
   }
-  .social {
-    display: none;
+  .row2 {
+    flex-direction: column;
   }
   .social-mobile {
     display: flex;

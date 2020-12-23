@@ -1,6 +1,5 @@
 <template>
   <main>
-    <Menu />
     <sectionOne />
     <sectionTwo />
     <sectionThree />
@@ -10,7 +9,7 @@
 </template>
 
 <script>
-import Menu from "@/components/Menu";
+// import Menu from "@/components/Menu";
 import SectionOne from "./Section1";
 import SectionTwo from "./Section2";
 import SectionThree from "./Section3";
@@ -18,7 +17,7 @@ import SectionFour from "./Section4";
 import SectionFive from "./Section5";
 export default {
   components: {
-    Menu,
+    // Menu,
     SectionOne,
     SectionTwo,
     SectionThree,

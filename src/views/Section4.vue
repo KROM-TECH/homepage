@@ -11,69 +11,17 @@
           below</i
         >
       </p>
-      <div class="chapters pt-2">
+      <div class="pt-2">
         <div class="project">
           <div class="project-img">
-            <img
-              src="https://github.com/KROM-TECH/timely/blob/master/img/144px.png?raw=true"
-              alt=""
-            />
+            <img src="https://studi.netlify.app/img/Logo.7aaf1950.svg" alt="" />
           </div>
           <div class="project-content">
-            <h4>Timely</h4>
+            <h4>Studee</h4>
             <div class="badges">
               <div class="badge badge-primary">Time Management</div>
               <div class="badge badge-primary">Productive</div>
-            </div>
-            <div class="content">
-              <p>
-                Timely is a timetable creator, event scheduler, task reminder and note keeper app
-                with both web and mobile versions
-              </p>
-            </div>
-            <button class="custom-btn btn-15">
-              View Site
-            </button>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="project-img">
-            <img
-              src="https://github.com/KROM-TECH/timely/blob/master/img/144px.png?raw=true"
-              alt=""
-            />
-          </div>
-          <div class="project-content">
-            <h4>Timely</h4>
-            <div class="badges">
-              <div class="badge badge-primary">Time Management</div>
-              <div class="badge badge-primary">Productive</div>
-            </div>
-            <div class="content">
-              <p>
-                Timely is a timetable creator, event scheduler, task reminder and note keeper app
-                with both web and mobile versions
-              </p>
-            </div>
-            <button class="custom-btn btn-15">
-              View Site
-            </button>
-          </div>
-        </div>
-
-        <div class="project">
-          <div class="project-img">
-            <img
-              src="https://github.com/KROM-TECH/timely/blob/master/img/144px.png?raw=true"
-              alt=""
-            />
-          </div>
-          <div class="project-content">
-            <h4>Timely</h4>
-            <div class="badges">
-              <div class="badge badge-primary">Time Management</div>
-              <div class="badge badge-primary">Productive</div>
+              <div class="badge badge-primary">Academics</div>
             </div>
             <div class="content">
               <p>
@@ -97,4 +45,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.project {
+  max-width: 270px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+</style>

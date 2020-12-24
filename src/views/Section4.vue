@@ -108,7 +108,7 @@ export default {
 h4 {
   font-size: 29px;
   padding: 10px;
-  color: #1e4196;
+  color: #1b2a4e;
 }
 img {
   height: 150px;

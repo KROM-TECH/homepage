@@ -2,7 +2,7 @@
   <main>
     <sectionOne />
     <sectionTwo />
-    <sectionThree v-if="false" />
+    <sectionThree />
     <sectionFour />
     <sectionFive />
   </main>

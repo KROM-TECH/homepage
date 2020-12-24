@@ -13,8 +13,8 @@
       <div class="chapters pt-2">
         <div class="uni">university of Lagos</div>
         <div class="uni">university of Ibadan</div>
-        <div class="uni">university of Benin</div>
-        <div class="uni">OAU</div>
+        <!-- <div class="uni">university of Benin</div> -->
+        <div class="uni">Obafemi Awolowo University</div>
       </div>
     </div>
   </section>
@@ -26,4 +26,37 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.bg-members {
+  background-image: url("../assets/map.jpg");
+  background-color: white;
+  /* background-attachment: fixed; */
+  background-size: 50rem auto;
+  height: auto;
+}
+
+.chapters {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  justify-content: center;
+}
+.uni {
+  background-color: #174971;
+  background-image: linear-gradient(to bottom right, #4ba0e4, #1b2a4e61);
+  padding: 1rem;
+  height: 1.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uni:hover {
+  box-shadow: 1px 2px 3px black;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #f15b6c, #174971);
+  border: 1px solid white;
+}
+</style>

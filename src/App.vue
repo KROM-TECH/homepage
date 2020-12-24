@@ -103,7 +103,7 @@ button {
 
 /* 15 */
 .btn-15 {
-  background: #1e4196;
+  background: #1b2a4e;
   border: none;
   z-index: 1;
 }
@@ -171,27 +171,7 @@ a {
   letter-spacing: 1.5px;
 }
 
-.chapters {
-  display: grid;
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, 15rem);
-  justify-content: center;
-}
-.uni {
-  background-color: #174971;
-  background-image: linear-gradient(to bottom right, #174971, #f15b6c);
-  padding: 1rem;
-  height: 1.9rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
 
-.uni:hover {
-  box-shadow: 1px 2px 3px black;
-  cursor: pointer;
-  background-image: linear-gradient(to bottom right, #f15b6c, #174971);
-  border: 1px solid white;
-}
 
 .text:hover {
   color: rgba(246, 242, 242, 0.796);
@@ -212,13 +192,7 @@ a {
   flex-direction: column;
   height: 100vh;
 }
-.bg-members {
-  background-image: url(`@/assets/map.jpg`);
-  background-color: white;
-  /* background-attachment: fixed; */
-  background-size: 50rem auto;
-  height: auto;
-}
+
 .bg-projects {
   background-color: #f1f1f1;
   height: auto;

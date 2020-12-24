@@ -2,7 +2,7 @@
   <transition name="slide" appear>
     <div class="modal" v-if="show">
       <div class="modal_box">
-        <form name="submit-to-google-sheet" @sumbit.prevent="submit($event)" style="padding: 10%;">
+        <form style="padding: 10%;" name="submit-to-google-sheet" @submit.prevent="send($event)">
           <div>
             <label for="name">Name</label>
             <input id="name" name="Name" type="text" placeholder="Enter Your Full Name" required />
@@ -20,17 +20,19 @@
 
           <div style=" margin-bottom: 4px;">
             <label for="">University</label>
-            <select name="University" required style="display: block;">
-              <option value="" disabled selected>Select Your University</option>
-              <option value="Unilag">University of Lagos</option>
+            <select v-model="universityVal" name="University" required style="display: block;">
+              <option v-for="uni in Universities" :key="uni" :value="uni.value" selected>{{
+                uni.text
+              }}</option>
             </select>
           </div>
 
           <div style=" margin-bottom: 4px;">
             <label for="">Faculty</label>
-            <select name="Faculty" required style="display: block;">
-              <option value="" disabled selected>Select Your Faculty</option>
-              <option value="Arts">Arts</option>
+            <select v-model="facultyVal" name="Faculty" required style="display: block;">
+              <option v-for="fac in faculties" :key="fac" :value="fac.value" selected>{{
+                fac.text
+              }}</option>
             </select>
           </div>
 
@@ -45,7 +47,11 @@
             />
           </div>
 
-          <button class="custom-btn" style="border:2px solid; margin-top:1rem;" type="submit">
+          <button
+            class="custom-btn"
+            style="border:2px solid; margin-top:1rem;"
+            :disabled="submitBtn"
+          >
             Sumbit
           </button>
 
@@ -64,30 +70,43 @@
 </template>
 
 <script>
+import Universities from "@/helpers/universities.js";
+import faculties from "@/helpers/faculties.js";
 export default {
   name: "Membership",
   props: ["show"],
   data() {
     return {
-      submitBtn: "false",
+      Universities,
+      faculties,
+
+      universityVal: "",
+      facultyVal: "",
+      submitBtn: false,
     };
   },
   methods: {
-    submit(e) {
-      console.log(e);
+    send(e) {
       e.preventDefault();
+      console.log(e);
+
+      this.submitBtn = true;
+
       console.log("object");
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbyZQwmc5BwXCDM8tlR5MU1bkN7-2tcSIiKctGQHjdJ0xJECo7HM/exec";
       const form = document.forms["submit-to-google-sheet"];
       console.log(form);
-      form.addEventListener("submit", () => {
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then(() => {
-            this.$emit("close");
-          })
-          .catch((error) => alert("Error!", error.message));
-      });
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then(() => {
+          this.$emit("close");
+          this.submitBtn = false;
+        })
+        .catch((error) => {
+          console.log(error);
+          alert("Something went wrong! please try again");
+          this.submitBtn = false;
+        });
     },
   },
 };

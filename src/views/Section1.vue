@@ -11,21 +11,22 @@
 
             <span>by students,</span>
 
-            <span>with students</span>
+            <span>with student </span>
           </p>
         </h1>
         <!-- Text -->
         <p class="h3 p-1">Using technology to build a better educational system</p>
         <!-- Buttons -->
         <div class="pt-1 p-1 btn-md">
-          <a href="#" v-scroll-to="'#about'">
-            <button href="" class="custom-btn btn-15">
-              Learn More
-            </button></a
-          >
+          <!-- <a > -->
+          <button href="#" v-scroll-to="'#about'" class="custom-btn btn-15">
+            Learn More
+          </button>
+
+          <!-- </a  > -->
 
           <button class="custom-btn btn-15" @click="show_modal = !show_modal">
-            Become a Member
+            Join the Community
           </button>
         </div>
       </div>
@@ -67,7 +68,7 @@ export default {
   height: auto;
 }
 .outline-text {
-  -webkit-text-fill-color: #1e4196;
+  -webkit-text-fill-color: #1b2a4e;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .content-center {
@@ -78,6 +79,7 @@ export default {
   margin-left: 5rem;
   animation: fadeInLeft 1s forwards;
 }
+
 .img-center {
   display: flex;
   flex-direction: column;
@@ -86,6 +88,13 @@ export default {
   animation: fadeInRight 1s forwards;
 }
 span {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+/* span {
   cursor: pointer;
   display: inline;
   position: relative;
@@ -119,8 +128,14 @@ span:hover {
   top: -2px;
   left: -2px;
   transition: all 0.1s ease-in-out;
-}
+} */
 h1 {
   font-size: 4rem;
+  word-spacing: 4px;
+}
+@media (max-width: 680px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 </style>

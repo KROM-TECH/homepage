@@ -1,8 +1,8 @@
 <template>
   <transition name="slide" appear>
-    <div class="modal">
+    <div class="modal" v-if="show">
       <div class="modal_box">
-        <form action="" name="submit-to-google-sheet" style="padding: 10%;" class="fadeRight">
+        <form name="submit-to-google-sheet" @sumbit.prevent="submit($event)" style="padding: 10%;">
           <div>
             <label for="name">Name</label>
             <input id="name" name="Name" type="text" placeholder="Enter Your Full Name" required />
@@ -45,22 +45,13 @@
             />
           </div>
 
-          <!-- <div style=" margin-bottom: 8px;">
-            <label for="">Group</label>
-            <select name="Group" id="group" required style="display: block;">
-              <option value="" disabled selected>Select Your Group</option>
-              <option value="Dev">Developers</option>
-              <option value="Aca">Academics</option>
-              <option value="Com">Community</option>
-            </select>
-          </div> -->
-
-          <button class="custom-btn" style="border:2px solid; margin-top:1rem;" @click="submit">
+          <button class="custom-btn" style="border:2px solid; margin-top:1rem;" type="submit">
             Sumbit
           </button>
 
           <button
             class="custom-btn"
+            type="button"
             style="border:2px solid; margin-top:1rem;"
             @click="$emit('close')"
           >
@@ -75,13 +66,16 @@
 <script>
 export default {
   name: "Membership",
+  props: ["show"],
   data() {
     return {
       submitBtn: "false",
     };
   },
   methods: {
-    submit() {
+    submit(e) {
+      console.log(e);
+      e.preventDefault();
       console.log("object");
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbyZQwmc5BwXCDM8tlR5MU1bkN7-2tcSIiKctGQHjdJ0xJECo7HM/exec";

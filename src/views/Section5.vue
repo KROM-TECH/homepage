@@ -45,4 +45,32 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail {
+  border: 1px solid #b23121;
+  color: #b23121;
+}
+.twitter {
+  border: 1px solid #00acee;
+  color: #00acee;
+}
+.facebook {
+  border: 1px solid #3b5998;
+  color: #3b5998;
+}
+.instagram {
+  border: 1px solid #3f729b;
+  color: #3f729b;
+}
+.whatsapp {
+  border: 1px solid #25d366;
+  color: #25d366;
+}
+</style>

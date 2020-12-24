@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-cream p-5 p-md-1" id="#about">
+  <section class="bg-cream p-5 p-md-1" id="about">
     <h2 class="about-heading text p-2">About</h2>
     <div class="about-content">
       <p class="px-8 px-md-1">
@@ -51,4 +51,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.about-heading {
+  font-size: 3rem;
+  text-align: center;
+}
+.about-content {
+  font-size: 1.1rem;
+  text-align: center;
+  word-spacing: 8px;
+  line-height: 1.5rem;
+}
+</style>

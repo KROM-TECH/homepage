@@ -68,7 +68,7 @@ export default {
   height: auto;
 }
 .outline-text {
-  -webkit-text-fill-color: #1b2a4e;
+  -webkit-text-fill-color: #1b4974;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .content-center {

@@ -103,7 +103,7 @@ button {
 
 /* 15 */
 .btn-15 {
-  background: #1b2a4e;
+  background: #1b4974;
   border: none;
   z-index: 1;
 }
@@ -170,8 +170,6 @@ a {
   color: white;
   letter-spacing: 1.5px;
 }
-
-
 
 .text:hover {
   color: rgba(246, 242, 242, 0.796);

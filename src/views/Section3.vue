@@ -43,7 +43,7 @@ export default {
 }
 .uni {
   background-color: #174971;
-  background-image: linear-gradient(to bottom right, #4ba0e4, #1b2a4e61);
+  background-image: linear-gradient(to bottom right, #4ba0e4, #1b497461);
   padding: 1rem;
   height: 1.9rem;
   border-radius: 10px;

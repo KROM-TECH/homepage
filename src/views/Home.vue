@@ -1,5 +1,7 @@
 <template>
-
+<main>
+  Hello
+</main>
 </template>
 
 <script>
@@ -7,4 +9,9 @@
   }
 </script>
 
-<style></style>
+<style>
+main{
+  height: 100vh;
+  width: 100vw;
+}
+</style>
